@@ -17,4 +17,9 @@ The player who first manage to place three of marks in a vertical, horizantal or
 After the winner come up, the game closes and the programme will ask the user whether the user wants to start a new round or not.
 
 A list of features / functions that the programme plan to implement.
+arrary()
+if-else
+while loop
+random()
+seed()
 array() function will be used to print the 3X3 table out. Then we use while loop function to identify in what kind of situation (if there is any row, column or diagonal that is filled with ‘x’ or ‘o’) we should continue or end the game and ask user to re-input a position if user inputted an invalid position(already be occupied). Random function will be utilized to generate the random move of the computer player. We will test whether computer player and user make a valid move or not and who won the game via if-else statement. It will also be used to re-play the game or end the game after someone won.
