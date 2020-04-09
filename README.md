@@ -1,2 +1,2 @@
-# point-cross
-A point-cross game which we play a lot in childhood
+# Tic Tac Toe
+A Tic Tac Toe game which we play a lot in childhood
