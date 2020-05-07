@@ -37,7 +37,7 @@ int main() {
                     if(array[random]!='O' && array[random]!='X'){
                     array[random]='O';
                     count+=1;
-                    cout << "computer' move:"<<endl;
+                    cout << "computer's move:"<<endl;
                     cout  << array[0] << ' ' << array[1] << ' ' << array[2]<<endl;
                     cout  << array[3] << ' ' << array[4] << ' ' << array[5]<<endl;
                     cout  << array[6] << ' ' << array[7] << ' ' << array[8]<<endl;
@@ -51,7 +51,7 @@ int main() {
                     if(array[random]!='O' && array[random]!='X'){
                     array[random]='O';
                     count+=1;
-                    cout << "computer' move:"<<endl;
+                    cout << "computer's move:"<<endl;
                     cout  << array[0] << ' ' << array[1] << ' ' << array[2]<<endl;
                     cout  << array[3] << ' ' << array[4] << ' ' << array[5]<<endl;
                     cout  << array[6] << ' ' << array[7] << ' ' << array[8]<<endl;
@@ -65,7 +65,7 @@ int main() {
                     if(array[random]!='O' && array[random]!='X'){
                     array[random]='O';
                     count+=1;
-                    cout << "computer' move:"<<endl;
+                    cout << "computer's move:"<<endl;
                     cout  << array[0] << ' ' << array[1] << ' ' << array[2]<<endl;
                     cout  << array[3] << ' ' << array[4] << ' ' << array[5]<<endl;
                     cout  << array[6] << ' ' << array[7] << ' ' << array[8]<<endl;
@@ -79,7 +79,7 @@ int main() {
                     if(array[random]!='O' && array[random]!='X'){
                     array[random]='O';
                     count+=1;
-                    cout << "computer' move:"<<endl;
+                    cout << "computer's move:"<<endl;
                     cout  << array[0] << ' ' << array[1] << ' ' << array[2]<<endl;
                     cout  << array[3] << ' ' << array[4] << ' ' << array[5]<<endl;
                     cout  << array[6] << ' ' << array[7] << ' ' << array[8]<<endl;
@@ -93,7 +93,7 @@ int main() {
                     if(array[random]!='O' && array[random]!='X'){
                     array[random]='O';
                     count+=1;
-                    cout << "computer' move:"<<endl;
+                    cout << "computer's move:"<<endl;
                     cout  << array[0] << ' ' << array[1] << ' ' << array[2]<<endl;
                     cout  << array[3] << ' ' << array[4] << ' ' << array[5]<<endl;
                     cout  << array[6] << ' ' << array[7] << ' ' << array[8]<<endl;
