@@ -98,13 +98,13 @@ int main()
 
                 else
                 {
-                    cout << "Position has been occupied. Choose again!" << endl;
+                    cout << "Position has been occupied. Choose again!" << endl; //to re-input an available move
                 }
             }
 
             else
             {
-                cout << "invalid move, choose again!" << endl;
+                cout << "invalid move, choose again!" << endl; //to re-input an available move
             }
 
             // The following if-conditions represent the situation
@@ -120,8 +120,8 @@ int main()
                 || ( array[2] == 'X' && array[4] == 'X' && array[6] == 'X' ) )
             {
                 cout << "You Are the Winner!" << endl;
-                Continue = false;
-                count = 10;
+                Continue = false; //end the game
+                count = 10; //end the game
             }
 
             // The following if-conditions represent the situation
@@ -135,7 +135,29 @@ int main()
                 count = 10;
             }
 
-            while ( count == 1 )
+            while ( count == 1 ) //after the first move of player
+            {
+                int random = rand()%8+1;
+                if ( array[random] != 'O' && array[random] != 'X' )
+                {
+                    array[random] = 'O';
+                    count += 1;
+                    cout << "computer's move:" << endl;
+                    cout << array[0] << ' ' << array[1]
+                      << ' ' << array[2] << endl;
+                    cout << array[3] << ' ' << array[4]
+                      << ' ' << array[5] << endl;
+                    cout << array[6] << ' ' << array[7]
+                      << ' ' << array[8] << endl;
+                }
+
+                else
+                {
+                    srand(time(NULL)); // to re-generate a new random number
+                }
+            }
+
+            while ( count == 3 ) //after the second move of player
             {
                 int random = rand()%8+1;
                 if ( array[random] != 'O' && array[random] != 'X' )
@@ -157,87 +179,7 @@ int main()
                 }
             }
 
-            while ( count == 3 )
-            {
-                int random = rand()%8+1;
-                if ( array[random] != 'O' && array[random] != 'X' )
-                {
-                    array[random] = 'O';
-                    count += 1;
-                    cout << "computer's move:" << endl;
-                    cout << array[0] << ' ' << array[1]
-                      << ' ' << array[2] << endl;
-                    cout << array[3] << ' ' << array[4]
-                      << ' ' << array[5] << endl;
-                    cout << array[6] << ' ' << array[7]
-                      << ' ' << array[8] << endl;
-                }
-
-                else
-                {
-                    srand(time(NULL));
-                }
-            }
-
-            while ( count == 5 )
-            {
-                int random = rand()%8+1;
-                if ( array[random] != 'O' && array[random] != 'X' )
-                {
-                    array[random] = 'O';
-                    count += 1;
-                    cout << "computer's move:" << endl;
-                    cout << array[0] << ' ' << array[1]
-                      << ' ' << array[2] << endl;
-                    cout << array[3] << ' ' << array[4]
-                      << ' ' << array[5] << endl;
-                    cout << array[6] << ' ' << array[7]
-                      << ' ' << array[8] << endl;
-                }
-
-                else
-                {
-                    srand(time(NULL));
-                }
-
-                // The following if-conditions represent the situation
-                // that the computer wins
-                // There are only if-conditions shown with count larger than 5
-                // because the computer needs at least three steps to win
-                if ( ( array[0] == 'O' && array [1] == 'O' && array[2] == 'O' )
-                    || ( array[3] == 'O' && array [4] == 'O'
-                      && array[5] == 'O' )
-                    || ( array[6] == 'O' && array [7] == 'O'
-                      && array[8] == 'O' )
-                    || ( array[0] == 'O' && array [3] == 'O'
-                      && array[6] == 'O' )
-                    || ( array[1] == 'O' && array [4] == 'O'
-                      && array[7] == 'O' )
-                    || ( array[2] == 'O' && array [5] == 'O'
-                      && array[8] == 'O' )
-                    || ( array[0] == 'O' && array [4] == 'O'
-                      && array[8] == 'O' )
-                    || ( array[2] == 'O' && array [4] == 'O'
-                      && array[6] == 'O' ) )
-                {
-                    cout << "Pity, You Loss." << endl;
-                    Continue = false;
-                    count = 10;
-                }
-
-                // The following if-conditions represent the situation
-                // that there is no winner until the gameboard is full
-                // The 'Continue == True' make sures
-                // that there is no winner until now
-                if ( count == 9  && Continue == true )
-                {
-                    cout << "Draw." << endl;
-                    Continue = false;
-                    count = 10;
-                }
-            }
-
-            while ( count == 7 )
+            while ( count == 5 ) //after the third move of player
             {
                 int random = rand()%8+1;
                 if ( array[random] != 'O' && array[random] != 'X' )
@@ -294,7 +236,65 @@ int main()
                     count = 10;
                 }
             }
-            while ( count == 9 )
+
+            while ( count == 7 ) //after the fourth move of player
+            {
+                int random = rand()%8+1;
+                if ( array[random] != 'O' && array[random] != 'X' )
+                {
+                    array[random] = 'O';
+                    count += 1;
+                    cout << "computer's move:" << endl;
+                    cout << array[0] << ' ' << array[1]
+                      << ' ' << array[2] << endl;
+                    cout << array[3] << ' ' << array[4]
+                      << ' ' << array[5] << endl;
+                    cout << array[6] << ' ' << array[7]
+                      << ' ' << array[8] << endl;
+                }
+
+                else
+                {
+                    srand(time(NULL));
+                }
+
+                // The following if-conditions represent the situation
+                // that the computer wins
+                // There are only if-conditions shown with count larger than 5
+                // because the computer needs at least three steps to win
+                if ( ( array[0] == 'O' && array [1] == 'O' && array[2] == 'O' )
+                    || ( array[3] == 'O' && array [4] == 'O'
+                      && array[5] == 'O' )
+                    || ( array[6] == 'O' && array [7] == 'O'
+                      && array[8] == 'O' )
+                    || ( array[0] == 'O' && array [3] == 'O'
+                      && array[6] == 'O' )
+                    || ( array[1] == 'O' && array [4] == 'O'
+                      && array[7] == 'O' )
+                    || ( array[2] == 'O' && array [5] == 'O'
+                      && array[8] == 'O' )
+                    || ( array[0] == 'O' && array [4] == 'O'
+                      && array[8] == 'O' )
+                    || ( array[2] == 'O' && array [4] == 'O'
+                      && array[6] == 'O' ) )
+                {
+                    cout << "Pity, You Loss." << endl;
+                    Continue = false;
+                    count = 10;
+                }
+
+                // The following if-conditions represent the situation
+                // that there is no winner until the gameboard is full
+                // The 'Continue == True' make sures
+                // that there is no winner until now
+                if ( count == 9  && Continue == true )
+                {
+                    cout << "Draw." << endl;
+                    Continue = false;
+                    count = 10;
+                }
+            }
+            while ( count == 9 ) // after the fifth move of player
             {
                 int random = rand()%8+1;
                 if ( array[random] != 'O' && array[random] != 'X' )
